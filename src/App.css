@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    background: #e5e6f0;
+    -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+    font-family: Roboto, sans-serif;
+}
+
+div .app {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+
+.app main {
+    margin-left: 30px;
+}
+main {
+    width: 65%;
+}
+
+
+aside {
+    background: #fff;
+    width: 30%;
+    box-shadow: 5px 5px 10px #e2e2e2;
+    border-radius: 3px;
+    padding: 30px 20px;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+    background: #fcfcfc;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px #e2e2e2;
+}
+
+li img {
+    width: 100px;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+p {
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+    line-height: 24px;
+}
+
+a { 
+    line-height: 34px;
+    background: none;
+    color: #e76269;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+h1 {
+    color: #636363;
+    font-size: 18px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+form div label {
+    color: #636363;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 3px solid #eee;
+}
+
+form button {
+    width: 100%;
+    border: 0;
+    margin-top: 20px;
+    background: #4665ee;
+    color: #eee;
+    border-radius: 3px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+@media (max-width: 1000px) {
+    div .app {
+        flex-direction: column;
+    }
+
+    .app main {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    aside {
+        width: 100%;
+    }
+}
