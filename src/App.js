@@ -2,16 +2,45 @@ import React, { useState } from 'react';
 import api from './api';
 import './App.css';
 
-
 function App() {
   const [devs, setDevs] = useState([]);
   const [github_username, setGithubUsername] = useState('');
+  const [carregando, setCarregando] = useState('');
+
+  function carregar(loading = true) {
+    if (loading === true) {
+      setCarregando('Carregando...');
+    } else {
+      setCarregando('');
+    }
+  }
 
   async function buscarUsuario() {
 
-    const reponse = await api.get(`/${github_username}`);
+    carregar();
 
-    setDevs([...devs, reponse.data]);
+    try {
+      const reponse = await api.get(`/${github_username}`);
+
+      setTimeout(() => {
+
+        setDevs([...devs, reponse.data]);
+        carregar(false);
+
+      }, 2000);
+
+    } catch (err) {
+
+      setCarregando('Usuário não existe!');
+
+      setTimeout(() => {
+
+        carregar(false);
+        
+      }, 2000);
+      
+    }
+
     setGithubUsername('');
   }
 
@@ -45,6 +74,7 @@ function App() {
             </li>
           ))}
         </ul>
+        <span>{carregando}</span>
       </main>
     </div>
   );
