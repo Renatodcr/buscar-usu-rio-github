@@ -12,7 +12,7 @@ html, body, #root {
 }
 
 body {
-    background: #e5e6f0;
+    background: #18102e;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -42,7 +42,7 @@ main {
 aside {
     background: #fff;
     width: 30%;
-    box-shadow: 5px 5px 10px #e2e2e2;
+    box-shadow: 2px 2px 8px #3049a3;
     border-radius: 3px;
     padding: 30px 20px;
 }
@@ -56,7 +56,7 @@ li {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 5px 5px 10px #e2e2e2;
+    box-shadow: 2px 2px 8px #3049a3;
 }
 
 li img {
@@ -64,8 +64,7 @@ li img {
 }
 .block {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: column;    
     margin-left: 20px;
 }
 
@@ -73,7 +72,6 @@ p {
     font-size: 14px;
     color: #999;
     margin-top: 5px;
-    line-height: 24px;
 }
 
 a { 
@@ -133,7 +131,7 @@ span {
     color: #e76269;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     div .app {
         flex-direction: column;
     }
